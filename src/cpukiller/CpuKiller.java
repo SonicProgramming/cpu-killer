@@ -19,6 +19,9 @@ public class CpuKiller {
      */
     public static void main(String[] args) {
         os = detectOS();
+        Server srv = new Server();
+        Thread thr = new Thread(srv);
+        thr.start();
     }
     
     private static int detectOS(){
